@@ -1,0 +1,21 @@
+{
+  "name": "future-cow-slidev",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "latest",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/motion": "^2.0.0",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3"
+  }
+}

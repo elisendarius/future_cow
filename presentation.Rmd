@@ -1,0 +1,189 @@
+---
+title: "Saved Feed Version 3.0 - Dairy Farming Presentation"
+author: "Mjölkveckan 2025"
+date: "December 2025"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## About This Presentation
+
+This document embeds the interactive Saved Feed Version 3.0 presentation created for Mjölkveckan (Swedish Dairy Week) in December 2025. The presentation summarizes the technical aspects of the new saved feed system that will be implemented in February 2025.
+
+### Key Features
+
+- **Bilingual Support**: Toggle between English and Swedish
+- **Interactive Navigation**: Navigate through 11 slides using arrow buttons or keyboard
+- **Nordic Design**: Earthy color palette inspired by dairy farming
+- **Results-First Approach**: Begins with conclusions rather than background
+
+---
+
+## Interactive Presentation
+
+The full interactive presentation is embedded below. Use the navigation buttons or arrow keys to move between slides. The language toggle in the top-right corner switches between English and Swedish.
+
+**Note**: Replace `YOUR_DEPLOYED_URL_HERE` in the iframe src below with your actual deployed application URL.
+
+```{r, echo=FALSE}
+# Embedded Interactive Presentation
+htmltools::tags$iframe(
+  src = "YOUR_DEPLOYED_URL_HERE",
+  width = "100%",
+  height = "800px",
+  frameborder = "0",
+  style = "border: 2px solid #006633; border-radius: 8px; margin: 20px 0;"
+)
+```
+
+---
+
+## Presentation Overview
+
+### Slide Structure
+
+1. **Title Slide**: Introduction to Saved Feed Version 3.0
+2. **Key Results**: Main conclusions and findings
+3. **Benefits Overview**: Advantages of the new system
+4. **Technical Implementation**: System architecture and features
+5. **Data Flow**: How information moves through the system
+6. **User Interface**: Dashboard and user experience
+7. **Performance Metrics**: System performance data
+8. **Integration**: Compatibility with existing systems
+9. **Timeline**: Implementation schedule
+10. **Support & Training**: Resources for users
+11. **Q&A**: Contact information and next steps
+
+### Color Palette
+
+The presentation uses a cohesive Nordic-inspired color scheme:
+
+```{r colors, echo=FALSE}
+library(knitr)
+
+colors <- data.frame(
+  Name = c("Dark Green", "Green", "Light Green", "Teal", "Sage"),
+  Hex = c("#006633", "#00A65C", "#8CC799", "#478075", "#7A9F8E"),
+  Usage = c("Primary headings", "Accent elements", "Backgrounds", "Secondary text", "Highlights")
+)
+
+kable(colors, caption = "Nordic-Inspired Color Palette")
+```
+
+---
+
+## Implementation Details
+
+### Technical Stack
+
+- **Framework**: React with TypeScript
+- **Styling**: Tailwind CSS v4.0
+- **Icons**: Lucide React
+- **Components**: Modular slide architecture (Slide0.tsx - Slide10.tsx)
+- **i18n**: Custom translation system with English/Swedish support
+
+### Deployment Instructions
+
+To deploy this presentation and use it in this R Markdown document:
+
+1. **Build the React application**:
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy to a hosting service**:
+   - Netlify
+   - Vercel
+   - GitHub Pages
+   - Your organization's hosting
+
+3. **Update the iframe src**: Replace `YOUR_DEPLOYED_URL_HERE` with your deployed URL
+
+4. **Knit this document**: Generate the HTML output with the embedded presentation
+
+---
+
+## Alternative: Offline Viewing
+
+If you need to view this without an internet connection, you can embed the built HTML file locally:
+
+```{r, eval=FALSE}
+# Example for local file embedding
+htmltools::tags$iframe(
+  src = "file:///path/to/your/built/index.html",
+  width = "100%",
+  height = "800px",
+  frameborder = "0"
+)
+```
+
+---
+
+## Data Analysis Section (Optional)
+
+If you have data related to the saved feed system, you can add R code chunks here for analysis:
+
+```{r sample-analysis, eval=FALSE}
+# Example: Load and analyze dairy farming data
+library(ggplot2)
+library(dplyr)
+
+# Your data analysis code here
+# feed_data <- read.csv("feed_data.csv")
+# 
+# ggplot(feed_data, aes(x = date, y = efficiency)) +
+#   geom_line(color = "#006633") +
+#   theme_minimal() +
+#   labs(title = "Feed Efficiency Over Time",
+#        x = "Date",
+#        y = "Efficiency (%)")
+```
+
+---
+
+## Export Options
+
+This R Markdown document can be rendered to multiple formats:
+
+### HTML Document (Current)
+```{r, eval=FALSE}
+rmarkdown::render("presentation.Rmd", output_format = "html_document")
+```
+
+### PDF Document
+```{r, eval=FALSE}
+rmarkdown::render("presentation.Rmd", output_format = "pdf_document")
+```
+
+### Word Document
+```{r, eval=FALSE}
+rmarkdown::render("presentation.Rmd", output_format = "word_document")
+```
+
+**Note**: The interactive iframe will only work in HTML output.
+
+---
+
+## Contact & Resources
+
+- **Event**: Mjölkveckan 2025
+- **Implementation Date**: February 2025
+- **Presentation Date**: December 2025
+
+For questions or more information about the Saved Feed Version 3.0 system, please refer to the technical documentation or contact the development team.
+
+---
+
+## Session Information
+
+```{r session-info}
+sessionInfo()
+```
